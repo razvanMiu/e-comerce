@@ -1,0 +1,297 @@
+*,*:after,*:before {
+  box-sizing: border-box
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans',sans-serif;
+  background-color: #f0f0f0;
+}
+/* HEADER */
+header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  height: 90px;
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.14), 0 2px 2px 0 rgba(0,0,0,.098), 0 1px 5px 0 rgba(0,0,0,.084);
+  z-index: 1;
+}
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+hr.borderStyle {
+	height: 6px;
+	width: 100%;
+	margin: 0;
+	background: url('../images/icons/hr-line.png') repeat-x 0 0;
+  border: 0;
+}
+
+hr.borderStyle2 {
+ 	height: 6px;
+	background: url('../images/icons/hr-line2.png') repeat-x 0 0;
+  border: 0;
+}
+/* NAVIGATION */
+nav {
+  background-color: #424242;
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: white;
+  height: 100%;
+  width: 150px;
+  padding: 10px 0;
+  z-index: 2;
+}
+
+.scroll-div:hover {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.scroll-div:hover::-webkit-scrollbar {
+  width: 5px;
+}
+.scroll-div:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-div:hover::-webkit-scrollbar-thumb {
+  background: #009688;
+  border-radius: 0!important;
+  width: 4px!important;
+  right: 0!important;
+}
+
+#logo {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav li {
+  cursor: pointer;
+  height: 80px;
+  padding: 20px 0;
+  padding-left: 3px;
+  font-size: 15px;
+}
+
+nav li:hover {
+  border-left: 3px solid #009688;
+}
+
+.greenBorder {
+  background-color: #3b3b3b;
+  border-left: 3px solid #009688;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+/* MAIN */
+main {
+  width: 88%;
+  height: 100%;
+  padding: 20px 40px 0 20px;
+  margin-top: 120px;
+  margin-left: 12%;
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.content {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.show {display:block;}
+
+main input {
+  background-color: transparent;
+  display: block;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #009688;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+/*____TESTE____*/
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.divFormContent {
+  padding: 30px 0;
+}
+
+.divFormContent label {
+  padding: 0 10px;
+}
+
+.inputFile {
+  height: 0.1;
+  width: 0.1;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.inputfile  label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus label,
+.inputfile label:hover {
+    background-color: red;
+}
+
+.inputfile label {
+	cursor: pointer;
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 0;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #009688;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 11.66667px;
+  text-align: center;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+main label {
+  display: inline-block;
+}
+
+span {
+	font-weight: bold;
+}
+
+.fail {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 550;
+  margin-bottom: 40px;
+}
+
+table td,th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: hsla(204, 85%, 46%, 0.199);
+}
+
+tr:nth-child(odd) {
+	background-color: white;
+}
+
+td:nth-child(odd) {
+	width: 20%;
+}
+
+.deleteDevice {
+  margin-bottom: 30px;
+}
+
+.deleteDevice button {
+  color: white;
+  font-weight: bold;
+  background-color: #ef2809;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
